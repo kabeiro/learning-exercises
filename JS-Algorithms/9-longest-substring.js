@@ -10,9 +10,11 @@ function findLongestSubstring(str) {
     let char = str[i];
     if (seen[char]) {
       start = Math.max(start, seen[char]);
+      console.log(seen);
     }
     longest = Math.max(longest, i - start + 1);
     seen[char] = i + 1;
+    console.log(seen);
   }
   return longest;
 }
